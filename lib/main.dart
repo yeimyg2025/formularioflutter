@@ -50,6 +50,86 @@ class LoginFormScreen extends StatelessWidget{
               )
             ]
           ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Icon(Icons.lock, size: 40, color: primaryNavy,),
+              const SizedBox(height: 12),
+              const Text("Iniciar Sesion",
+              style: TextStyle(
+                fontSize: 24,
+                color: primaryNavy,
+              ),
+              ),
+              const SizedBox(height: 8),
+              const Text("Complete sus datos personales", style: TextStyle(fontSize: 14,color: secondaryGrey),),
+              const SizedBox(height: 24),
+              //correo
+              const Align(
+                alignment: Alignment.centerLeft,
+                child: Text("Correo Electronica",
+                style: TextStyle(color: primaryNavy)),
+              ),
+              const SizedBox(height: 6),
+              TextField(
+                decoration: InputDecoration(
+                  hintText: "ejemplo@gmail.com",
+                  filled: true,
+                  fillColor: backgroundGrey,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(6),
+                    borderSide: BorderSide.none,
+                  ),
+                  contentPadding:
+                    const EdgeInsets.symmetric(horizontal: 12,vertical: 14),
+                ),
+              ),
+              const SizedBox(height: 16),
+
+              //campo contraseña
+              const Align(
+                alignment: Alignment.centerLeft,
+                child:
+                  Text("Contraseña", style: TextStyle(color: primaryNavy)),
+              ),
+              const SizedBox(height: 6),
+              TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  hintText: "Ingrese su contraseña",
+                  filled: true,
+                  fillColor: backgroundGrey,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(6),
+                    borderSide: BorderSide.none,
+                  ),
+                  contentPadding:
+                    const EdgeInsets.symmetric(horizontal: 12,vertical: 14),
+                ),
+              ),
+              const SizedBox(height: 24),
+
+              //Login
+              SizedBox(
+                width: double.infinity,
+                height: 45,
+                child: ElevatedButton(
+                  onPressed: null,
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: primaryNavy,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                ),
+                child: const Text(
+                  "iniciar sesion",
+                  style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 12),
+            ],
+          ),
         ),
       ),
     );

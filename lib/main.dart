@@ -3,6 +3,7 @@ import 'package:formularioflutter/pages/turno.dart';
 import 'package:formularioflutter/pages/tutor.dart';
 import 'package:formularioflutter/pages/infante.dart';
 import 'package:formularioflutter/pages/curso.dart';
+import 'package:formularioflutter/pages/requisito.dart';
 void main(){//metodo
   runApp(MyApp());
 }
@@ -122,7 +123,7 @@ class LoginFormScreen extends StatelessWidget{
                   onPressed: (){
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Turno()),
+                      MaterialPageRoute(builder: (context) => Requisito()),
                     );
                   },
                 style: ElevatedButton.styleFrom(

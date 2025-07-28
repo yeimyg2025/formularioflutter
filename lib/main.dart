@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:formularioflutter/pages/tutor.dart';
 import 'package:formularioflutter/pages/infante.dart';
+import 'package:formularioflutter/pages/curso.dart';
 void main(){//metodo
   runApp(MyApp());
 }
@@ -120,7 +121,7 @@ class LoginFormScreen extends StatelessWidget{
                   onPressed: (){
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => infante()),
+                      MaterialPageRoute(builder: (context) => Curso()),
                     );
                   },
                 style: ElevatedButton.styleFrom(

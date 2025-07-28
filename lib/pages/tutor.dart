@@ -62,6 +62,33 @@ class tutor extends StatelessWidget {
                   ],
                 )),
               ]),
+              DataRow(cells: [
+                DataCell(Text('2')),
+                DataCell(Text('Carlos')),
+                DataCell(Text('Mamani')),
+                DataCell(Text('capellán')),
+                DataCell(Text('73211233')),
+                DataCell(Text('Zona Central')),
+                DataCell(Text('Av. Libertad #123')),
+                DataCell(Text('7894561')),
+                DataCell(Text('activo')),
+                DataCell(Row(
+                  children: [
+                    IconButton(
+                      icon: Icon(Icons.edit, color: Colors.green),
+                      onPressed: () {
+                        // Acción para editar
+                      },
+                    ),
+                    IconButton(
+                      icon: Icon(Icons.delete, color: Colors.red),
+                      onPressed: () {
+                        // Acción para borrar
+                      },
+                    ),
+                  ],
+                )),
+              ]),
             ],
           ),
         ),

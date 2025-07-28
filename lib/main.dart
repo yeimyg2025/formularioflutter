@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:formularioflutter/pages/tutor.dart';
 void main(){//metodo
   runApp(MyApp());
 }
+
 
 class MyApp extends StatelessWidget {//clase
   @override
@@ -9,11 +11,11 @@ class MyApp extends StatelessWidget {//clase
     return MaterialApp(
       title: 'Formulario de registro',//texto plano
          theme: ThemeData(
-             primarySwatch: Colors.deepPurple,
-            primaryColor: const Color(0xFF1E3A8A),
+             primarySwatch: Colors.purple,
+            primaryColor: const Color(0xFFFF7700),
             colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color(0xFF1E3A8A),
-              secondary: const Color(0xFF6B7280),
+              seedColor: const Color(0xFFFF7700),
+              secondary: const Color(0xFFFF7700),
             ),
               useMaterial3: true),
       home: const LoginFormScreen(),
@@ -26,9 +28,9 @@ class MyApp extends StatelessWidget {//clase
 class LoginFormScreen extends StatelessWidget{
   const LoginFormScreen({super.key});
 
-  static const Color primaryNavy = Color(0xFF1E3A8A);
+  static const Color primaryNavy = Color(0xFFFF7700);
   static const Color backgroundGrey = Color(0xFFF9FAFB);
-  static const Color secondaryGrey = Color(0xFF6B7280);
+  static const Color secondaryGrey = Color(0xFFFFD700);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +42,7 @@ class LoginFormScreen extends StatelessWidget{
           padding: const EdgeInsets.all(24),
           width: 400,
           decoration: BoxDecoration(
-            color: Colors.deepOrange,
+            color: Colors.purple,
             borderRadius: BorderRadius.circular(12),
             boxShadow: [
               BoxShadow(
@@ -114,7 +116,12 @@ class LoginFormScreen extends StatelessWidget{
                 width: double.infinity,
                 height: 45,
                 child: ElevatedButton(
-                  onPressed: null,
+                  onPressed: (){
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => tutor()),
+                    );
+                  },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: primaryNavy,
                   shape: RoundedRectangleBorder(
@@ -128,6 +135,11 @@ class LoginFormScreen extends StatelessWidget{
                 ),
               ),
               const SizedBox(height: 12),
+              //Contraseña olvidada
+              const Text(
+                "¿olvidaste tu contraseña?",
+                style: TextStyle(color: secondaryGrey),
+              ),
             ],
           ),
         ),
